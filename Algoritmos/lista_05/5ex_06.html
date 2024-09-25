@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+Valor da temperatura do ambiente: <input type="number" id="input_temperatura"> <br>
+<br>
+<button onclick="verificar()">Verificar Clima</button>
+<div id="div_alimento"></div>
+</body>
+</html>
+
+<script>
+    function verificar(){
+        var temperatura = Number(input_temperatura.value);
+
+        if(temperatura < 10){
+            div_alimento.innerHTML = `<img src="https://images.pexels.com/photos/2255935/pexels-photo-2255935.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">`;
+        }else{
+            div_alimento.innerHTML = `<img src= "https://envato-shoebox-0.imgix.net/03c7/d44e-fbaf-474e-ab17-6ae6aa83c00f/oranges-kids-natural-1242.JPG?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=700&s=d6f162851529ae157c0e3fd37a95a334">`;
+        }
+    }
+</script>

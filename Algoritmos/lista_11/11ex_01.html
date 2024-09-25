@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Fruta: <input type="text" id="inpt_fruta">
+    <br><br>
+    <button onclick="procurar()"> Pesquisar </button>
+    <br><br>
+    <div id="div_lista"></div>
+
+</body>
+</html>
+
+<script>
+
+    // vetor
+    var listaDasFrutas = ['banana', 'laranja', 'maçã', 'manga', 'melancia']
+
+    function procurar(){
+
+        var fruta = inpt_fruta.value;
+        // vai trazer a quantidade de itens dentro do vetor
+        var tamanhoVetor = listaDasFrutas.length;
+        var frutaExiste = false;
+
+        for (var i = 0; i < tamanhoVetor; i++) {
+            var frutaAtual = listaDasFrutas[i];
+            
+            if(frutaAtual == fruta){
+                frutaExiste = true;
+                break;
+            }
+        }
+
+        // só funciona se for verdadeira
+        if(frutaExiste){
+
+            div_lista.innerHTML = `A fruta ${fruta} existe na lista.`;
+
+        }else div_lista.innerHTML = `Não existe a fruta ${fruta} na lista.`;
+
+    }
+
+</script>

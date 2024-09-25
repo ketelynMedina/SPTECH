@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Nome do aluno: <input type="text" id="input_aluno">
+    <button onclick="cadastro(),exibir()"> Cadastrar </button>
+    <br><br>
+    <div id="div_lista"></div>
+
+</body>
+</html>
+<script>
+
+    var listaAlunos = [];
+
+    function cadastro(){
+        var aluno = input_aluno.value;
+        listaAlunos.push(aluno);
+
+        input_aluno.value = '';
+
+    
+    }
+
+    function exibir(){
+        var listaInteira = div_lista;
+        
+        div_lista.innerHTML = "";
+
+        for(var i = listaAlunos.length; i > 0; i--){
+
+            listaInteira.innerHTML += `${listaAlunos[i - 1]} <br>`;
+        }
+    }
+</script>

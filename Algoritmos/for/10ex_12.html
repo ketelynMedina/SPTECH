@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Qual tabuada você quer ver</h1>
+    <h2>escolha entre 2 a 9</h2>
+    <input type="number" id="inp_tabuada">
+    <br><br>
+    <h3>Até que número a tabuada deve ir?</h3>
+    <input type="number" id="inp_final">
+    <br><br>
+    <button onclick="calcular()">Ver Tabuada</button>
+    <br><br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+
+    function calcular(){
+        var tabuada = Number(inp_tabuada.value);
+        var valorFinal = Number(inp_final.value);
+
+        inp_tabuada.value= "";
+        inp_final.value = "";
+
+        for (var contador = 1; contador <= valorFinal; contador++) {
+
+            if(contador % 2 == 0 ){
+                div_mensagem.innerHTML += `<b style="color: darkblue;"> ${tabuada} x ${contador} = ${tabuada * contador}<br>`
+            }else {
+                    div_mensagem.innerHTML += `<b style="color: brown;"> ${tabuada} x ${contador} = ${tabuada * contador}<br>`
+            }
+        }
+
+    }
+</script>

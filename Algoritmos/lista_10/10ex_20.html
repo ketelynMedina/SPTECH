@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Quantidade de depósitos você tem no banco: <br><input type="number" id="input_depositos">
+    <br><br>
+    Valor do depósito: <br><input type="number" id="input_valor">
+    <br><br>
+    <button onclick="Mensal()"> Acompanhar grana </button>
+    <br><br>
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function Mensal(){
+
+        var depositos = Number(input_depositos.value);
+        var valor = Number(input_valor.value);
+        var valorTotal = 0
+
+        contador = 0;
+
+        while (contador < depositos){
+
+            contador += 1;
+            valorTotal += valor;
+
+            div_mensagem.innerHTML += `${contador}° Mês: ${valorTotal} <br>`
+
+        }
+
+        div_mensagem.innerHTML += `<br>Total guardado R$${valorTotal}`
+
+    }
+</script>

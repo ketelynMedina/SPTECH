@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Digite o nome do guerreiro: <input type="text" id="input_guerreiro"> <br>
+    <br>
+    Qual é o ki normal do seu Guerreiro <input type="number" id="input_ki"> <br>
+    <br>
+    <button onclick="bonus()">Ver ki em cada forma</button>
+</body>
+</html>
+
+<script>
+
+    function bonus(){
+
+        var guerreiro = input_guerreiro.value;
+        var ki = input_ki.value;
+        var super1 = ki*50;
+        var super2 = ki*100;
+
+        alert(guerreiro + " Super Sayajin: " + super1 );
+        alert(guerreiro + " Super Sayajin 2: " + super2 );
+    }
+</script>

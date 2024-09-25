@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Digite sua idade: <input type="number" id="input_idadeAtual">
+    <br><br>
+    <button onclick="medir()"> Minha fases na vida </button>
+    <br><br>
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+<script>
+
+    function medir(){
+
+        var idadeAtual = Number(input_idadeAtual.value);
+        var mensagemCompleta = div_mensagem;
+
+        for(var i = 0; i <= idadeAtual; i++){
+
+            mensagemCompleta.innerHTML += `${i} anos `;
+
+            if(i <= 4){
+
+                mensagemCompleta.innerHTML += `(Primeira Infância) <br>`;
+
+            }else if(i <= 6){
+
+                mensagemCompleta.innerHTML += `(Pré-escolar) <br>`;
+            }else if(i <= 10){
+
+                mensagemCompleta.innerHTML += `(Segunda Infância) <br>`;
+            }else if(i <= 18){
+
+                mensagemCompleta.innerHTML += `(Adolescência) <br>`;
+            }else if(i <= 50){
+
+                mensagemCompleta.innerHTML += `(Adulto) <br>`;
+            }else if(i <= 100){
+
+                mensagemCompleta.innerHTML += `(Melhor idade) <br>`;
+            }else mensagemCompleta.innerHTML += `(Matusalém) <br>`;
+        }
+    }
+
+</script>

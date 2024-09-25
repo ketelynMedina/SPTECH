@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    De quantos em quantos dias você faz musculação? <input type="number" id="input_frequencia">
+    <br><br>
+    <button onclick="exibir()"> Exibir rotina mensal </button>
+    <br><br>
+    <div id="mensagem"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function exibir(){
+
+        mensagem.innerHTML = "";
+
+        var frequencia = Number(input_frequencia.value);
+        var contador = 1;
+
+        while (contador <= 30) {
+
+            
+                if (contador % frequencia == 1) {
+                    
+                    mensagem.innerHTML += `Dia ${contador} - Musculação<br>`;
+                    
+                } else {
+                    
+                    mensagem.innerHTML += `Dia ${contador} - Comer, dormir etc<br>`;
+                    
+                }
+                
+                contador += 1;
+            }
+
+    }
+
+</script>

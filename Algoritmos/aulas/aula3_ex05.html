@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Valor da Passagem: <input id="input_passagem"> <br>
+    <br>
+    Quantidade de Viagens: <input id="input_viagens"> <br>
+    <br>
+    Distancia (km): <input id="input_distancia"> <br>
+    <br>
+    <button onclick="calcular()"><b>Calcular VT</button> <br>
+    <br>
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+
+        var passagem = Number(input_passagem.value);
+        var viagens = Number(input_viagens.value);
+        var distancia = Number(input_distancia.value);
+
+        var quantidade_uber = viagens*0.1;
+        var quantidade_onibus = viagens *0.9;
+
+        var valor_uber_viagem = distancia*0.75;
+        var total_onibus = passagem*quantidade_onibus;
+        var total_uber = valor_uber_viagem*quantidade_uber;
+
+        var valor_total = total_uber + total_onibus;
+
+        div_mensagem.innerHTML = ` Você vai gastar R$ ${valor_total}  por mês com transporte`
+
+    }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Digite o nome da empresa: <input type="text" id="input_empresa">
+    <br><br>
+    Digite o valor da bolsa: <input type="number" id="input_bolsa">
+    <br><br>
+    Digite o valor do VR: <input type="number" id="input_vr">
+    <br><br>
+    Digite o tempo de deslocamento: <input type="number" id="input_distancia">
+    <br><br>
+    <button onclick="analisar()"> É preferida? </button>
+    <br><br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function analisar(){
+        var empresa = input_empresa.value;
+        var bolsa = Number(input_bolsa.value);
+        var vr = Number(input_vr.value);
+        var distancia = Number(input_distancia.value);
+
+        if(bolsa >= 1800 || vr >= 20 || distancia <= 30){
+            div_mensagem.innerHTML = `A empresa ${empresa} é uma de suas preferências`
+        }else div_mensagem.innerHTML = `A empresa está fora da sua lista`;
+    }
+</script>

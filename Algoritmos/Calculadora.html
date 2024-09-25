@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    A sua plantação possui quantos metros²? <input type="text" id="ipt_metros"><br>
+    <div id="div_mensagem"></div>
+    <button onclick="calculo()">Calcular</button>
+</body>
+</html>
+
+<script>
+    function calculo(){
+        var metrosQuadrados = Number(ipt_metros.value);
+        var hectare = metrosQuadrados * 0.0001;
+        var quantidadeÁgua = (hectare * 4500000) * 1.4;
+        var metrosCubicos = quantidadeÁgua / 1000;
+        var sensor = quantidadeÁgua * 0.8;
+        var metrosCubicos_2 = sensor / 1000;
+       
+        
+
+        if (metrosCubicos <= 10){
+            var valorAgua = 71.98
+            var economia = 71.98
+            div_mensagem.innerHTML = `Você gastaria R$ ${valorAgua} sem a nossa solução. Com a nossa solução, você gastará R$ ${economia}`;
+        }
+        if(metrosCubicos >=11 && metrosCubicos <= 20){
+            var valorAgua = metrosCubicos * 14.00
+            var economia = metrosCubicos_2 * 14.00
+            div_mensagem.innerHTML = `Você gastaria R$ ${valorAgua} sem a nossa solução. Com a nossa solução, você gastará R$ ${economia}`;}
+
+        if(metrosCubicos >=21 && metrosCubicos <= 50){
+            var valorAgua = metrosCubicos * 26.84
+            var economia = metrosCubicos_2 * 26.84
+            div_mensagem.innerHTML = `Você gastaria R$ ${valorAgua} sem a nossa solução. Com a nossa solução, você gastará R$ ${economia}`;}
+                
+                
+        if(metrosCubicos > 50){
+            var valorAgua = metrosCubicos * 27.96
+            var economia = metrosCubicos_2 * 27.96
+            div_mensagem.innerHTML = `Você gastaria R$ ${valorAgua} sem a nossa solução. Com a nossa solução, você gastará R$ ${economia}`;
+                }
+            }
+                
+            
+
+        
+    
+</script>

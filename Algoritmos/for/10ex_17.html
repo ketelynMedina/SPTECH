@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Digite a quantidade de pessoas que irão no carro: <input type="number" id="input_qtdPessoas">
+    <br><br>
+    Digite a quantidade de pessoas o seu automóvel suporta: <input type="text" id="input_qtdMaxima">
+    <br><br>
+    <button onclick="carona()"> #Partiu Carona </button>
+    <br><br>
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+
+    function carona(){
+
+        var qtdPessoas = Number(input_qtdPessoas.value);
+        var qtdMaxima = Number(input_qtdMaxima.value);
+        var mensagemCompleta = div_mensagem;
+
+        input_qtdPessoas.value = "";
+        input_qtdMaxima.value = "";
+
+        for(var i = 1; i <= qtdPessoas; i++){
+
+            if(i > qtdMaxima ){
+
+                mensagemCompleta.innerHTML += `O ${i}° passageiro terá que esperar!`;
+            } else {
+
+                mensagemCompleta.innerHTML += `Entrou o ${i}° passageiro `;
+            }
+
+            if(i == 1 ){
+
+                mensagemCompleta.innerHTML += `(que é o(a) motorista) <br>`;
+            }else mensagemCompleta.innerHTML += `<br>`;
+
+        }
+    }
+</script>

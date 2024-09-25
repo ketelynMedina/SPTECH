@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Ajuda Emergencial</h1>
+    <br><br>
+    Digite sua renda individual: <input type="number" id="input_rendaIndividual">
+    <br><br>
+    Digite sua renda familiar: <input type="number" id="input_rendaFamiliar">
+    <br><br>
+    <button onclick="verificar()">Terei Benefícios</button>
+    <br><br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function verificar(){
+        var rIndividual = Number(input_rendaIndividual.value);
+        var rFamiliar = Number(input_rendaFamiliar.value);
+
+        if(rIndividual <= 2000 || rFamiliar <= 3000){
+            div_mensagem.innerHTML = `Você terá direito ao auxílio`
+        }else div_mensagem.innerHTML = `Sem direito ao auxílio`;
+    }
+</script>

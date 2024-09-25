@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Quantidade de elefantes: <input type="text" id="input_elefantes">
+    <br><br>
+    <button onclick="repeticao()"> Atazanar a medium </button>
+    <br><br>
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+
+    function repeticao() {
+
+        var elefante = Number(input_elefantes.value);
+        var contador = 1;
+        var fraseAlert = "incomodam, ";
+
+        while (contador < elefante) {
+
+            fraseAlert += `incomodam, `;
+            contador += 1;
+
+            div_mensagem.innerHTML += "1 elefante incomoda muita gente <br><br>";
+
+            div_mensagem.innerHTML += `${contador} elefantes, ${fraseAlert} muito mais <br><br>`;
+        }
+    }
+
+</script>

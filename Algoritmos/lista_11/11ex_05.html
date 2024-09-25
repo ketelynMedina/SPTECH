@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1> Seus Filmes Favoritos</h1>
+    <br>
+    digite um filme: <input type="text" id="input_filmeF">
+    <button onclick="adicionarFilme()"> Cadastrar Filme </button>
+    <br><br>
+    <button onclick="exibir()"> Sua Lista </button>
+    <div id="div_lista"></div>
+
+</body>
+</html>
+
+<script>
+
+    var listaFilmes = [];
+
+    function adicionarFilme(){
+        var filmeF = input_filmeF.value;
+        listaFilmes.push(filmeF);
+
+        input_filmeF.value = "";
+    }
+
+    function exibir(){
+        var tamanhoLista = listaFilmes.length;
+        var listaInteira = div_lista;
+
+        if(tamanhoLista >= 1){
+            listaInteira.innerHTML = `Seu filme favorito: ${listaFilmes[0]} <br><br>`;
+        }else {
+            listaInteira.innerHTML = `Adicione um filme.`
+        }
+
+        if(tamanhoLista >= 3){
+            listaInteira.innerHTML += `Seu 3° filme favorito: ${listaFilmes[2]} <br><br>`;
+        }else {
+            listaInteira.innerHTML += `Seu 3° filme favorito: Ainda não existe <br><br>`;
+        }
+
+        listaInteira.innerHTML += `Total de filmes cadastrados: ${tamanhoLista}`;
+
+    }
+</script>

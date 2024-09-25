@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Digite um número entre 10 e 500: <input type="number" id="input_numero">
+    <br><br>
+    <button onclick="somar()"> Somar Pares </button>
+    <br><br>
+    <div id="div_mensagem"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function somar() {
+
+        var numero = Number(input_numero.value);
+        var mensagemCompleta = div_mensagem;
+        var somaTotal = 0;
+
+        if (numero >= 10 && numero <= 500) {
+            for (var i = 0; i <= numero; i++) {
+
+                if(i % 2 == 0){
+                    
+                    mensagemCompleta.innerHTML += `${i} <br>`
+                    somaTotal += i; 
+                }
+
+
+            }
+
+            mensagemCompleta.innerHTML += `Soma dos pares: ${somaTotal}`;
+
+        }else alert("Insira um número válido!");
+    }
+</script>

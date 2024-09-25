@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Quanto custa a passagem:<input id="input_passagem"> <br>
+    <br>
+    Quantas viagens você vai ter que fazer por mês:<input type="text" id="input_uso"> <br>
+    <br>
+    <button onclick="cota()">Ver economia</button>
+
+</body>
+</html>
+
+<script>
+
+    function cota(){
+
+        var passagem = Number(input_passagem.value);
+        var uso = Number(input_uso.value);
+        var resultado = (passagem/2)*uso
+
+        alert("Você economizará R$" + resultado);
+    }
+</script>

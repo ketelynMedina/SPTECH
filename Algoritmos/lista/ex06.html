@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>EQUIPE LANTRA</h1>
+    <br>
+    Valor da Pizza: <input type="text" id="input_dindin"> <br>
+    <br>
+    Quantas pessoas vão ajudar a pagar: <input type="number" id="input_amigos"> <br>
+    <br>
+    <button onclick="comida()">#lovePizza</button>
+    
+</body>
+</html>
+
+<script>
+
+    function comida(){
+
+        var valor = Number(input_dindin.value);
+        var vaquinha = Number(input_amigos.value);
+        var resultado = valor / vaquinha;
+        
+        alert("Cada um dos " + vaquinha + " amigos vai pagar R$" + resultado);
+    }
+</script>

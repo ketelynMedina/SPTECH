@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Digite um número: <input type="text" id="input_numero1"> <br>
+    <br>
+    Digite outro número: <input type="text" id="input_numero2"> <br>
+    <br>
+    <button onclick="somando()">Soma</button>
+    <button onclick="subtraindo()">Diferença</button>
+    <button onclick="multiplicando()">Produto</button>
+    <button onclick="dividindo()">Razão</button>
+    <div id="frase"></div>
+
+</body>
+</html>
+
+<script>
+
+    function somando(){
+
+        var n1 = Number(input_numero1.value);
+        var n2 = Number(input_numero2.value);
+        var resultado = n1 + n2;
+
+        frase.innerHTML = "A soma entre " + n1 + " e " + n2 + " é: " + resultado;
+    }
+
+    function subtraindo(){
+        
+        var n1 = Number(input_numero1.value);
+        var n2 = Number(input_numero2.value);
+        var resultado = n1 - n2;
+
+        frase.innerHTML = "A diferença entre " + n1 + " e " + n2 + " é " + resultado;
+
+    }
+
+    function multiplicando(){
+        
+        var n1 = Number(input_numero1.value);
+        var n2 = Number(input_numero2.value);
+        var resultado = n1 * n2;
+
+        frase.innerHTML = "O produto entre " + n1 + " e " + n2 + " é " + resultado;
+    }
+
+    function dividindo(){
+        
+        var n1 = Number(input_numero1.value);
+        var n2 = Number(input_numero2.value);
+        var resultado = n1 / n2;
+
+        frase.innerHTML = "A razão entre " + n1 + " e " + n2 + " é " + resultado;
+    }
+</script>

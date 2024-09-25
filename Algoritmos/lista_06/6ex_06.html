@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Time</h1>
+    <br>
+    Qual time grande de Sp você torce: <input type="text" id="input_time"><br>
+    <br>
+    <button onclick="comentar()">Fale sobre esse time </button><br>
+    <br>
+    <div id="div_faleSobre"></div>
+</body>
+</html>
+
+<script>
+    function comentar(){
+        var time = input_time.value;
+
+        if(time == 'corinthians'){
+            div_faleSobre.innerHTML = `<b style="color: white; background-color: black";> Salve o Corinthians </b>`;
+        }
+        if(time == 'palmeiras'){
+            div_faleSobre.innerHTML = `<b style="background-color: green; color: white";> Salve o alviverde imponente </b>`;
+        }
+        if(time == 'santos'){
+            div_faleSobre.innerHTML = `<b style="background-color: white; color: black";> Agora quem dá a bola é o Santos </b>`;
+        }
+        if(time == 'são paulo'){
+            div_faleSobre.innerHTML = `<b style="background-color: black; color: red";> Salve o Tricolor paulista </b>`;
+        }
+    }
+</script>

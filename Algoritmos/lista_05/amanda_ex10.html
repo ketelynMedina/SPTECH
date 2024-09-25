@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite um número: <input type="text" id="input_numero">
+    <button onclick="verificar()">Verificar</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+
+    // crie um programa que diga se o número que o usuário digitou é par ou ímpar
+    // a) Solicita o número
+    // b) Ao clicar em "Verificar", determine se o número é par ou ímpar
+    // Desafiei: Ketelyn Medina
+     
+    function verificar() {
+        var numero = input_numero.value;
+
+        if (numero % 2 == 0) {
+            div_mensagem.innerHTML= `<br> O número ${numero} é par`
+        } else {
+            div_mensagem.innerHTML= `<br> O número ${numero} é ímpar`
+        }
+    }
+
+</script>

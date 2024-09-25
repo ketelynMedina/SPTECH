@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Qual é a altura mínima desejada: <input type="number" id="input_minimo"><br>
+    <br>
+    Qual é a altura máxima desejada: <input type="number" id="input_maxima"><br>
+    <br>
+    <b>Nome do candidato: </b><input type="text" id="input_nome"><br>
+    <br>
+    <b>Altura do candidato: </b><input type="number" id="input_altura"><br>
+    <br>
+    <button onclick="verResultado()">Analisar Altura</button> <br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function verResultado(){
+        var alturaMinima = Number(input_minimo.value);
+        var alturaMaxima = Number(input_maxima.value);
+        var candidato = input_nome.value;
+        var alturaCan = Number(input_altura.value);
+
+        if(alturaMinima > 1 && alturaMaxima > alturaMinima){
+            if(alturaCan >= alturaMinima && alturaCan <= alturaMaxima){
+                div_mensagem.innerHTML = `O candidato ${candidato} com altura ${alturaCan} participará do
+                processo de seleção de piloto`;
+            }else div_mensagem.innerHTML = `Infelizmente o candidato ${candidato} com altura
+            ${alturaCan} não atende os requisitos.`;
+        }else{
+            alert("Altura mínima e máxima inválidas!")
+            }
+        }
+</script>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colisão</title>
+</head>
+
+<body>
+    <h1><b>Primeiro Objeto</b></h1>
+    valor do 0x: <input type="number" id="input_1valor0x"><br>
+    valor do 0y: <input type="number" id="input_1valor0y"><br>
+    valor do 1x: <input type="number" id="input_1valor1x"><br>
+    valor do 1y: <input type="number" id="input_1valor1y"><br>
+
+    <h1><b>Segundo Objeto</b></h1>
+    valor do 0x: <input type="number" id="input_2valor0x"><br>
+    valor do 0y: <input type="number" id="input_2valor0y"><br>
+    valor do 1x: <input type="number" id="input_2valor1x"><br>
+    valor do 1y: <input type="number" id="input_2valor1y"><br>
+    <br>
+    <button onclick="calculo_colisao()">Resultado</button><br>
+    <br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function calculo_colisao() {
+
+        var primeiro_0x = Number(input_1valor0x.value);
+        var primeiro_0y = Number(input_1valor0y.value);
+        var primeiro_1x = Number(input_1valor1x.value);
+        var primeiro_1y = Number(input_1valor1y.value);
+
+        var segundo_0x = Number(input_2valor0x.value);
+        var segundo_0y = Number(input_2valor0y.value);
+        var segundo_1x = Number(input_2valor1x.value);
+        var segundo_1y = Number(input_2valor1y.value);
+
+        // validação enunciado
+        if (primeiro_0x < primeiro_1x) {
+            if (primeiro_0y < primeiro_1y) {
+                if (segundo_0x < segundo_1x) {
+                    if (segundo_0y < segundo_1y) {
+
+                        // validar colisao
+                        if (primeiro_0x <= segundo_0x) {
+                            if (segundo_1x >= primeiro_1x) {
+                                if (primeiro_0y <= segundo_0y) {
+                                    if (segundo_1y >= primeiro_1y) {
+
+                                        if(segundo_0x < primeiro_1x){
+                                            div_mensagem.innerHTML = `<b>1<b>`;
+                                        }else{
+                                            if(segundo_0y < primeiro_1y){
+                                                div_mensagem.innerHTML = `<b>0<b>`;
+                                            }else div_mensagem.innerHTML = `<b>0<b>`;
+                                        }
+
+                                        }else div_mensagem.innerHTML = `<b>0<b>`;
+                                } else div_mensagem.innerHTML = `<b>1<b>`;
+                            }else div_mensagem.innerHTML = `<b>1<b>`;
+                        }else div_mensagem.innerHTML = `<b>1<b>`
+
+                    }else div_mensagem.innerHTML = `< b > número inválido < b > `;
+                }else div_mensagem.innerHTML = `< b > número inválido < b > `;
+            } else div_mensagem.innerHTML = `< b > número inválido < b > `;
+        }else div_mensagem.innerHTML = `< b > número inválido < b >`;
+
+    }
+</script>

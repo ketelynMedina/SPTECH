@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Calculadora de cansaço do aluno SPtech</h1>
+    <br><br>
+    <h2>Meio de transporte</h2>
+    Digite aqui: <input type="text" id="input_transporte">
+    <br><br>
+    <button onclick="calcular()">Calculadora cansaço</button>
+
+</body>
+</html>
+<script>
+    function calcular(){
+        var transporte = input_transporte.value;
+
+        if(transporte == 'carro' || transporte == 'Bicicleta'){
+            alert("Tá tranquilo...")
+        }
+        if(transporte == 'metrô'){
+            alert("Um pouco cansado")
+        }
+        if(transporte == 'ônibus' || transporte == 'lotação'){
+            alert("Vish... vive cansado")
+        }
+    }
+</script>

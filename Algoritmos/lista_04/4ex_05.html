@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Quantidade de KWh consumida no mês: <input type="number" id="input_kwh"> <br>
+    <br>
+    <button onclick="calcular()">Calcular conta de Luz</button>
+
+</body>
+</html>
+
+<script>
+
+    function calcular(){
+        var kwh = input_kwh.value;
+        var conta = kwh*0.85;
+        var desconto = conta - (conta*0.1);
+
+        if (kwh < 100){
+            alert("O total da sua conta é: R$ " + desconto);
+        }
+
+        if (kwh >= 100){
+            alert("O total da sua conta é: R$ " + conta);
+        }
+    }
+</script>

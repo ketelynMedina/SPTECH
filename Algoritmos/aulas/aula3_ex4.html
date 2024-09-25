@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    SABOR DA PIZZA: <input type="text" id="input_sabor"> <br>
+    <br>
+    VALOR DA PIZZA: <input type="text" id="input_valor"> <br>
+    <br>
+    QUANTIDADE DE PESSOAS QUE IRÃO SABOREAR A PIZZA: <input type="text" id="input_amigos"> <br>
+    <br>
+    <button onclick="vaquinha()">Ver valor por amigo</button>
+    <div id="div_pizza"></div>
+
+</body>
+</html>
+
+<script>
+
+    function vaquinha(){
+
+        var valor = input_valor.value;
+        var amigos = input_amigos.value;
+        var sabor = input_sabor.value;
+
+        var soma = valor/amigos;
+        var divisao = soma*0.1;
+        var total = soma + divisao;
+
+        div_pizza.innerHTML = ` <br> Cada amigo vai colaborar com R$${total} para a pizza de ${sabor}<br>
+        <br>BOA PIZZA !!`
+    }
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Digite um número para ver sua tabuada: <input type="text" id="input_num"> <br>
+    <br>
+    <button onclick="tabuadas()">Ver Tabuada</button>
+    <div id="div_num"></div>
+
+</body>
+</html>
+
+<script>
+
+    function tabuadas(){
+
+    var num = input_num.value;
+    var resultado1 = num*1;
+    var resultado2 = num*2;
+    var resultado3 = num*3;
+    var resultado4 = num*4;
+    var resultado5 = num*5;
+    var resultado6 = num*6;
+    var resultado7 = num*7;
+    var resultado8 = num*8;
+    var resultado9 = num*9;
+
+    div_num.innerHTML = `<br>  ${num} x 1 = ${resultado1} <br>
+    <br> ${num} x 2 = ${resultado2} <br>
+    <br> ${num} x 3 = ${resultado3} <br>
+    <br> ${num} x 4 = ${resultado4} <br>
+    <br> ${num} x 5 = ${resultado5} <br>
+    <br> ${num} x 6 = ${resultado6} <br>
+    <br> ${num} x 7 = ${resultado7} <br>
+    <br> ${num} x 8 = ${resultado8} <br>
+    <br> ${num} x 9 = ${resultado9}`;
+
+    }
+
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Lista de Filmes favoritos</h1>
+
+    Digite um filme: <input type="text" id="input_filme">
+    <button onclick="adicionarNaLista() , exibir()"> Cadastrar </button>
+    <br><br>
+    <div id="div_mensagem"></div>
+
+</body>
+
+</html>
+<script>
+
+    var listaFilmes = [];
+
+    function adicionarNaLista() {
+        var filme = input_filme.value;
+        listaFilmes.push(filme);
+
+        input_filme.value = "";
+
+    }
+
+    function exibir() {
+
+        div_mensagem.innerHTML = "";
+        
+        for (var i = 0; i < listaFilmes.length; i++) {
+
+            div_mensagem.innerHTML += `${listaFilmes[i]} <br>`
+        }
+    }
+
+</script>

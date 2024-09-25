@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ajuda Governamental</h1><br>
+    <br>
+    Digite sua renda individual: <input type="number" id="input_rIndividual"><br>
+    <br>
+    Digite sua renda familiar: <input type="number" id="input_rFamiliar"><br>
+    <br>
+    <button onclick="verificacao()">Verificar Ajuda</button><br>
+
+</body>
+</html>
+
+<script>
+
+    function verificacao(){
+        var minhaRenda = Number(input_rIndividual.value);
+        var rendaFamilia =  Number(input_rFamiliar.value);
+
+        if(minhaRenda <= 1050 && rendaFamilia <= 2100){
+            alert("Você terá direito!");
+        }else alert("Você NÃO terá direito.");
+    }
+</script>

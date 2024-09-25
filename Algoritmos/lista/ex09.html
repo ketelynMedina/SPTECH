@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Nome do aluno: <input id="input_nome"> <br>
+    <br>
+    Nota da avaliação continuada: <input type="text" id="input_continuada"> <br>
+    <br>
+    Nota da avaliação semestral: <input type="text" id="input_semestral"> <br>
+    <br>
+    <button onclick="media()">Ver Média Final</button>
+
+</body>
+</html>
+
+<script>
+    
+    function media(){
+
+        var aluno = input_nome.value;
+        var pC = Number(input_continuada.value);
+        var pS = Number(input_semestral.value);
+        var pMedia = (pC*0.4) + (pS*0.6);
+
+        alert(
+            "A média de " + aluno + " será de " + pMedia
+        );
+    }
+
+
+</script>

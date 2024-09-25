@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Digite o nome da sua Rua/Avenida/Vila: <input type="text" id="input_rua"> <br>
+    <br>
+    Seu número: <input type="number" id="input_numero"> <br>
+    <br>
+    <button onclick="casa()">Onde eu moro</button>
+
+</body>
+</html>
+
+<script>
+
+    function casa(){
+
+        var rua = input_rua.value;
+        var numero = input_numero.value;
+
+        alert("Seu logradouro é " + rua + "\nO número do seu logradouro é " + numero);
+    }
+</script>

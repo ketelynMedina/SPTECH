@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nutrição por amor</h1>
+    <br>
+    Digite quantos pães você come por dia: <input type="number" id="input_pao"><br>
+    <br>
+    Digite quantos pacotes de bolacha recheada você come por dia: <input type="number" id="input_bolacha"><br>
+    <br>
+    Digite quantos copos de achocolatado você toma por dia: <input type="number" id="input_achocolatado"><br>
+    <br>
+    <button onclick="calcularCalorias()">Verificar Calorias</button><br>
+    <br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function calcularCalorias(){
+
+        var quantidadePao = Number(input_pao.value);
+        var quantidadeBolacha = Number(input_bolacha.value);
+        var quantidadeAchocolatado = Number(input_achocolatado.value);
+        // pão francês = 50 calorias, bolacha = 80, achocolatado = 70.
+        var total_pao = quantidadePao * 50;
+        var total_bolacha = quantidadeBolacha * 80;
+        var total_achocolatado = quantidadeAchocolatado * 70;
+        var caloriasTotais = total_pao + total_bolacha + total_achocolatado;
+
+        if (caloriasTotais < 200){
+            div_mensagem.innerHTML = `Parabéns, vai ficar em forma!`
+        } else {
+            if(caloriasTotais <= 400){
+                div_mensagem.innerHTML = `Cuidado, vai ficar menos saudável!`
+            }else div_mensagem.innerHTML = `Alerta crítico de saúde!!!`
+        }
+    }
+</script>

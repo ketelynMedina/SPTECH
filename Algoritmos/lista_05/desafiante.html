@@ -1,0 +1,43 @@
+<!-- Ajude a FAMÍLIA SILVA a fazer a lista de natal desse ano 
+1) Solicite o nome do familiar
+2) Solicite o prato que o familiar vai levar 
+3) Crie um butão "Lista da Ceia" que mostre na página uma lista que vai incrementando 
+os nomes e os pratos que cada familiar irá levar.
+desafiei a Amanda Martins --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    Digite o seu nome: <input type="text" id="input_familiar"> <br>
+    <br>
+    Digite o prato que você vai levar: <input type="text" id="input_prato"> <br>
+    <br>
+    <button onclick="lista()">Lista da Ceia</button>
+    <div id="div_mensagem"><br><b>Lista da Ceia</b><br>
+    <br></div>
+
+</body>
+</html>
+
+<script>
+
+    function lista(){
+
+        var familiar = input_familiar.value;
+        var prato = input_prato.value;
+
+        input_familiar.value = "";
+        input_prato.value = "";
+        
+        div_mensagem.innerHTML += `${familiar} vai levar ${prato} <br>`;
+        
+        
+
+    }
+</script>

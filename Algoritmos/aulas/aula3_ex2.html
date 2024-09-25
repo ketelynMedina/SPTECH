@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Quantos votos o candidato A obteve na eleiçao: <input type="text" id="input_candA"> <br>
+    <br>
+    Quantos votos o candidato B obteve na eleição: <input type="text" id="input_candB"> <br>
+    <br>
+    Quantidade de votos brancos na eleição: <input type="text"  id="input_votBranco"> <br>
+    <br>
+    Quantidade de votos nulos na eleição: <input type="text" id="input_votNulos"> <br>
+    <br>
+    <button onclick="resultados()">Resultado da Eleição</button>
+    <div id="div_eleicao"></div>
+
+</body>
+</html>
+
+<script>
+
+    function resultados(){
+
+        var vA = Number(input_candA.value);
+        var vB = Number(input_candB.value);
+        var vBran = Number(input_votBranco.value);
+        var vN = Number(input_votNulos.value);
+        var inv = vBran + vN;
+        var total = vA + vB + inv;
+        var aPorc = (vA*100)/total;
+        var bPorc = (vB*100)/total;
+        var invPorc = (inv*100)/total;
+
+
+        div_eleicao.innerHTML = ` <br> Total de votos:  ${total} <br>
+        <br> Candidato A:  ${aPorc}%  (${vA} votos)<br>
+        <br> Candidato B:  ${bPorc}%  (${vB} votos)<br>
+        <br> Inválidos:  ${invPorc}%  (${inv} votos)`;
+
+        
+    }
+</script>

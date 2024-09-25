@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1> Bairros onde eu já morei </h1>
+    <br><br>
+    Bairro: <input type="text" id="inpt_bairro">
+    <button onclick="adicionar()"> Cadastrar Bairro </button>
+    <br><br>
+    Número do cadastro:  <input type="number" id="input_numero">
+    <br><br>
+    <button onclick="listar()"> Relembrar moradia </button>
+    <br><br>
+    <div id="div_lista"></div>
+
+</body>
+</html>
+<script>
+
+    var listaBairros = [];
+    
+    function adicionar(){
+        var bairro = inpt_bairro.value;
+        listaBairros.push(bairro);
+
+    }
+
+    function listar(){
+        var numeroBairro = input_numero.value;
+        var bairroAtual = listaBairros.length;
+
+        if(numeroBairro >= 1 && numeroBairro <= bairroAtual){
+
+            div_lista.innerHTML = `${listaBairros[numeroBairro - 1]}`;
+
+        }else div_lista.innerHTML = `Você ainda não morou num ${numeroBairro}° bairro!`; 
+
+    }
+</script>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="input_n1"> <br>
+    <input id="input_n2"> <br>
+    <button style="color: brown; background-color: antiquewhite;" onclick="somar()">Somar</button>
+    <button style="color: brown; background-color: antiquewhite;"  onclick="subtrair()">Subtrair</button>
+    <button style="color: brown; background-color: antiquewhite;"  onclick="dividir()">Dividir</button>
+    <button style="color: brown; background-color: antiquewhite;"  onclick="multiplicar()">Multiplicar</button>
+    
+</body>
+</html>
+
+<script>
+
+        function multiplicar () {
+            var n1 = input_n1.value;
+            var n2 = input_n2.value;
+            var resultado = n1 * n2;
+
+            alert("A multiplicação de " + n1 + " * " + n2  + " resulta em: " + (resultado));
+        }
+
+        function dividir () {
+            var n1 = input_n1.value;
+            var n2 = input_n2.value;
+            var resultado = n1 / n2;
+
+            alert("A divisão de " + n1 + " / " + n2 + " resulta em: " + (resultado));
+        }
+
+        function subtrair () {
+            var n1 = input_n1.value;
+            var n2 = input_n2.value;
+            var resultado = n1 - n2;
+
+            alert("A subtraçao de " + n1 + " - " + n2 + " resulta em: " + (resultado));
+        }
+
+        function somar () {
+            var n1 = input_n1.value;
+            var n2 = input_n2.value;
+            var resultado = Number(n1) + Number(n2);
+
+            alert("A soma de " + n1 + " + " + n2 + " resulta em : " + (resultado));
+        }
+
+</script>

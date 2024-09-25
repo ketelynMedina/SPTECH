@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--a) Pergunte ao usuário qual sua meta de economia
+
+b) Pergunte ao usuário quanto tem guardado
+
+c) Ao clicar em "Analisar economia"...
+
+d) Caso a meta tenha sido alcançada ou ultrapassada, exibir, 
+abaixo do botão, a frase Parabéns, meta alcançada!. Caso a meta tenha sido ultrapassada, exibir também a frase Meta ultrapassada em 
+X (onde X é a diferença entre a economia e a meta)
+
+e) Caso a meta ainda não tenha sido alcançada, exibir, abaixo do botão, a frase Força! Ainda em busca da meta! 
+Falta X (onde X é a diferença entre a meta e a economia)-->
+
+Qual é a sua meta de economia: <input type="number" id="input_economia"><br>
+<br>
+Quanto você tem guardado: <input type="number" id="input_poupanca"> <br>
+<button onclick="metaEconomia()">Analisar economia</button>
+<div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    function metaEconomia(){
+        var meta = Number(input_economia.value);
+        var poupanca = Number(input_poupanca.value);
+
+        if(meta == poupanca){
+            div_mensagem.innerHTML = `Parabéns, meta alcançada! 😁✨`
+        }else{
+            if(meta < poupanca){
+                div_mensagem.innerHTML = `Parabéns, meta alcançada! 😁✨ <br> Meta ultrapassada em ${poupanca - meta} `
+            }else{
+                div_mensagem.innerHTML = `Força! Ainda em busca da meta! <br> Falta ${meta - poupanca}`
+            }
+        }
+    }
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    digite um número entre 0 a 100: <input type="number" min="0" max="100" id="input_numero">
+    <br><br>
+    <button onclick="dividir()"> Ver Divisores </button>
+    <br><br>
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+<script>
+
+    function dividir(){
+
+        var numero = Number(input_numero.value);
+        var contador = 1;
+        var fraseDiv = "";
+        var primo = 0;
+
+        while(contador <= numero){
+
+            while(numero % contador == 0){
+                
+                fraseDiv += `${contador} <br>`
+ 
+                    primo += 1;
+                
+                contador += 1;
+            }
+
+            contador += 1;
+
+        }
+        
+        if( primo == 2 && numero != 1 && numero != 0){
+
+            fraseDiv += `<br><br> O número ${numero} é um número primo.`
+            
+        }
+
+        div_mensagem.innerHTML = `${fraseDiv}`
+
+    }
+</script>

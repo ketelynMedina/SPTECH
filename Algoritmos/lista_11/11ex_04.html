@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Sua lista de Filmes favoritos</h1>
+    Digite o nome de um filme que você gosta: <input type="text" id="input_filme">
+    <button onclick="adicionar()"> Cadastrar Filme </button>
+    <br><br>
+    <button onclick="exibir()"> Ver Favoritos </button>
+    <br><br>
+    <div id="div_lista"></div>
+
+</body>
+
+</html>
+<script>
+
+    var listaFilmes = [];
+
+    function adicionar() {
+        var filme = input_filme.value;
+        listaFilmes.push(filme);
+
+        input_filme.value = "";
+    }
+
+    function exibir() {
+        var total = listaFilmes.length;
+
+        div_lista.innerHTML = "";
+
+        for(var i = 1; i < listaFilmes.length || i == listaFilmes.length; i++){
+
+            div_lista.innerHTML += `${i} - ${listaFilmes[i - 1]} <br>`;
+        }
+
+        if (total > 1) {
+            div_lista.innerHTML += `<br>Total: ${total} <br><br>
+        O filme que mais gosta é ${listaFilmes[0]}<br><br>`
+            div_lista.innerHTML += `E o que menos gosta é ${listaFilmes[listaFilmes.length - 1]}`;
+        } else
+            div_lista.innerHTML += `<br>Total: ${total} <br><br>
+    O filme que mais gosta é ${listaFilmes[0]}<br><br>`
+
+    }
+</script>

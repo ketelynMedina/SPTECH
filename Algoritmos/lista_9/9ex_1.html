@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="aumentar()">Aumentar Largura</button>
+    <button onclick="diminuir()">Reduzir Largura</button>
+    <div id="div_mensagem">
+        <img style="width: 100px" src="https://th.bing.com/th/id/R.13e244a198834c908863c17b365dc772?rik=ZPA2STsNM5%2f%2f3g&pid=ImgRaw&r=0">
+    </div>
+</body>
+</html>
+
+<script>
+
+    var largura = 100;
+
+    function exibir(){
+        div_mensagem.innerHTML = `<img style="width: ${largura}px" src="https://th.bing.com/th/id/R.13e244a198834c908863c17b365dc772?rik=ZPA2STsNM5%2f%2f3g&pid=ImgRaw&r=0">`
+    }
+
+    function aumentar(){
+        largura = largura + 10;
+        exibir();
+
+    }
+
+    function diminuir(){
+        largura = largura - 10;
+        exibir();
+    }
+
+</script>
