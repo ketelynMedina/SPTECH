@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Amigo Combina - Natal Medina - 2023</title>
+
+</head>
+<body>
+    
+    Digite quantas pessoas vão participar do sorteio: <input type="number" id="numeroPessoa">
+    <br><br>
+    <button onclick="sortear()">Sortear</button>
+    <br><br>
+    <div id="mensagem"></div>
+
+</body>
+</html>
+
+<script>
+
+    var listaBotao = [];
+
+    function sortear(){
+
+        var max = Number(numeroPessoa.value);
+        var min = 1;
+        var intervalo = max - min;
+
+        var aleatorio = min + parseInt(Math.random() * (intervalo + 1));
+        listaBotao.push(aleatorio);
+
+        mensagem.innerHTML = `${aleatorio}`;
+
+
+        // if(aleatorio == 1){
+        //     listaBotao.push(1);
+        // }else if(aleatorio == 2){
+        //     listaBotao.push(2);
+        // }else if(aleatorio == 3){
+        //     listaBotao.push(3);
+        // }else if(aleatorio == 4){
+        //     listaBotao.push(4);
+        // }else if(aleatorio == 5){
+        //     listaBotao.push(5);
+        // }
+
+        var primeiro = listaBotao.indexOf(1);
+        var segundo = listaBotao.indexOf(2);
+        var terceiro = listaBotao.indexOf(3);
+        var quarto = listaBotao.indexOf(4);
+        var quinto = listaBotao.indexOf(5);
+
+        if(
+            primeiro >= 0 && 
+            segundo >= 0 && 
+            terceiro >= 0 && 
+            quarto >= 0 && 
+            quinto >= 0
+        ){
+
+            alert("FIM DO JOGO")
+
+            mensagem.innerHTML = "";
+            numeroPessoa.value = "";
+            listaBotao = [];
+
+        }
+
+    }
+
+</script>
